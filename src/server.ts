@@ -8,6 +8,20 @@ const port = 3000;
 // Middleware для парсинга JSON
 app.use(express.json());
 
+// Middleware для CORS заголовков
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+
+  // Обработка preflight запросов
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
 /**
  * Генерирует случайное количество непрочитанных сообщений
  */
