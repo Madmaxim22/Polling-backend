@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // компилирует TypeScript в JavaScript, совместимый с ES2020
+    "module": "commonjs", //  использует CommonJS для системы модулей (для Node.js)
+    "lib": ["es6"], // включает типы и API ES6 при компиляции
+    "allowJs": true, // позволяет использовать JavaScript файлы вместе с TypeScript
+    "outDir": "./dist", // компилированные файлы будут сохраняться в папке dist
+    "rootDir": "./src", // исходные файлы находятся в папке src
+    "strict": true, // включает строгую проверку типов
+    "esModuleInterop": true, // улучшает совместимость с ES-модулями
+    "skipLibCheck": true, // пропускает проверку типов в библиотечных файлах для ускорения
+    "forceConsistentCasingInFileNames": true, // обеспечивает последовательность регистра имен файлов
+    "resolveJsonModule": true, // позволяет импортировать JSON файлы
+    "declaration": true, // генерирует .d.ts файлы с объявлениями типов
+    "declarationMap": true, // создает карты объявлений для отладки
+    "sourceMap": true // создает карты исходного кода для отладки
+  },
+  "include": ["src/**/*"], //  включает все файлы в папке src
+  "exclude": ["node_modules", "dist"] // исключает сторонние модули и выходную папку из компиляции
+} 
