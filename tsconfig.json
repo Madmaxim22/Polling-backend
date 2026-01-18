@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020", // компилирует TypeScript в JavaScript, совместимый с ES2020
-    "module": "commonjs", //  использует CommonJS для системы модулей (для Node.js)
+    "module": "ESNext", // использует ESNext для системы модулей (современные ES-модули)
+    "moduleResolution": "node", // использует Node.js алгоритм разрешения модулей
     "lib": ["es6"], // включает типы и API ES6 при компиляции
     "allowJs": true, // позволяет использовать JavaScript файлы вместе с TypeScript
     "outDir": "./dist", // компилированные файлы будут сохраняться в папке dist
@@ -17,4 +18,4 @@
   },
   "include": ["src/**/*"], //  включает все файлы в папке src
   "exclude": ["node_modules", "dist"] // исключает сторонние модули и выходную папку из компиляции
-} 
+}
